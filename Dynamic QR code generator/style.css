@@ -1,0 +1,92 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin: 40px 0 20px;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: lightgray;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+label:hover {
+  background-color: blue;
+  color: #fff;
+}
+
+input[type=radio]:checked + label {
+  background-color: blue;
+  color: #fff;
+}
+
+article {
+  display: none;
+  padding: 20px;
+  background-color: lightgray;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+article.on {
+  display: block;
+}
+
+input[type=text],
+input[type=tel],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+#qrcode {
+  margin: 40px 0;
+}
+
+#previewImg {
+  margin: 40px 0;
+}
+
+.button {
+  background-color: blue;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: blue;
+}
+
+@media (max-width: 767px) {
+  label {
+    display: block;
+    margin: 20px 0;
+  }
+
+  article {
+    margin: 20px 0 0;
+  }
+}

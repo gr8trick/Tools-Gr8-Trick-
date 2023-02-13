@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Dynamic QR Code  Generator &amp; Export PNG  and SVG</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Dynamic QR Code Generator & Export PNG and SVG</h1>
+<input type="radio" id="tab1" name="tab" value="url" checked>
+<label for="tab1">URL</label>
+<input type="radio" id="tab2" value="phone" name="tab">
+<label for="tab2">Phone</label>
+<input type="radio" id="tab3" value="sms" name="tab">
+<label for="tab3">SMS</label>
+<input type="radio" id="tab4" value="text" name="tab">
+<label for="tab4">Plain text</label>
+<input type="radio" id="tab5" value="email" name="tab">
+<label for="tab5">Email</label>
+<br><br>
+ <article>
+  <input type="text" name="url" id="url" placeholder="https://www.shopify.com" pattern="(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9]{1,63}\.[a-z0-9]{2,63}\b([-a-zA-Z0-9@:%_\+.~#?&amp;/=]*)">
+</article>
+<article>
+  <input name="phone" id="phone" type="tel" placeholder="+1">
+</article>
+<article>
+  <p>Your Phone Number</p>
+  <input name="phone" id="sms_phone"
+         type="tel" placeholder="+1" aria-required="false" aria-label="+1" value=""
+         aria-invalid="true">
+  <p> Your Message</p>
+  <textarea id="sms_text" placeholder="Add it here..."></textarea>
+</article>
+<article>
+  <textarea id="plain_text" placeholder="Add it here..." maxlength="1000"></textarea>
+</article>
+<article>
+  <label>Email</label>
+  <input name="email" id="email" type="email" placeholder="example@example.com">
+  <label>Subject</label>
+  <input name="message" id="subject" type="text" placeholder="Subject">
+  <label>Your Message</label>
+  <textarea id="message" placeholder="Add it here..."></textarea>
+</article>
+<br>
+<div id="qrcode"></div>
+<br><div id="previewImg"></div>
+
+
+<a class="button qr-png-download" href="javascript:;" title="Download PNG">Download PNG</a>&nbsp; &nbsp; &nbsp;
+<a class="button qr-svg-download" href="javascript:;" title="Download SVG">Download SVG</a>
+
+<br><br>
+
+<h3><a href="https://codepen.io/shehbaz72/pen/YzLWOyb">Bar Code Generator </a></h3>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/130527/qrcode.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.9.0/html-to-image.js'></script><script  src="./script.js"></script>
+</body>
+</html>
